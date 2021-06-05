@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="..\css\homepage.css">
+</head>
+
+<body>
+    <header class="headerContainer">
+        <div class="logo-content">
+            <img id="headerIcon" src="../assets/images/logo.png">
+            <div>
+                <span id="empText">ADDRESS</span><br>
+                <span id="payrolltext">BOOK</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="header-content">
+            <div class="emp-detail-text">
+                Person Details
+                <div class="emp-count">10</div>
+            </div>
+            <a href="../pages/address_form.html" class="add-button">
+                <img src="..\assets\icons\add-24px.svg" alt="">
+                Add Person
+            </a>
+        </div>
+        <div class="table-main">
+            <table id="table-display" class="table">
+
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/AddressBook.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+
+</html>

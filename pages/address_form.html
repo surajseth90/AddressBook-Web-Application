@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddressBook Form</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="..\css\address_form_style.css">
+
+
+</head>
+
+<body>
+    <div class="headerContent">
+        <div class="header-main">
+            <img src="../assets/images/logo.png" alt="">
+            <div class="text">
+                <span id="address-text">ADDRESS</span><br>
+                <span id="book-text">BOOK</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <form class="form" action="#">
+            <div class="form-header">
+                <span>PERSON ADDRESS FORM</span>
+            </div>
+
+            <div class="row-content">
+                <label for="name"></label>
+                <input class="text-field" type="text" placeholder="Full Name" id="name" required>
+                <error-output class="text-error" for="name"></error-output>
+            </div>
+
+            <div class="row-content">
+                <label for="address"></label>
+                <input class="text-field" type="text" placeholder="Address" name="address" id="address" required>
+
+            </div>
+
+            <div class="row-content">
+
+                <input type="text" name="city" placeholder="Enter City" id="city" required>
+                <select name="state" id="state" required>
+                    <option value="" disabled selected>Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+
+                <label for="zip"></label>
+                <input type="text" id="zip" name="zip" placeholder="Zip Code..." required>
+                <error-output class="zip-error" for="zip"></error-output>
+
+            </div>
+            <div class="row-content">
+                <label for="phone-number"></label>
+                <input class="text-field" type="text" placeholder="Phone Number" name="phone-number" id="phone-number"
+                    required>
+                <error-output class="phoneNo-error" for="phone-number"></error-output>
+
+            </div>
+            <div class="buttonParent">
+                <a href="../pages/homepage.html" class="resetButton button cancelButton">Cancel</a>
+                <div class="submit-reset">
+                    <button class="submitButton button" onclick="saveForm()" id="submit">Submit</button>
+                    <button class="resetButton button" type="reset" onclick="resetForm()" id="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/address_form.js"></script>
+    <script src="../js/AddressBook.js"></script>
+</body>
+
+</html>
