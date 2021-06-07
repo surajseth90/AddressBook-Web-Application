@@ -3,13 +3,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
     AddressBookList = getContactDetailsFromLocalStorage();
     document.querySelector(".contact-count").textContent = AddressBookList.length;
     createInnerHtml();
-    localStorage.removeItem('editContact');
+    localStorage.removeItem('editAddressBook');
 });
+
+const getContactDetailsFromLocalStorage = () => {
+    return localStorage.getItem('ContactList') ?
+        JSON.parse(localStorage.getItem('ContactList')) : [];
+}
 
 const createInnerHtml = () => {
     if (AddressBookList.length == 0) return;
     const headerHtml = "<th>Name</th><th>Address</th><th>City</th>"
-        + "<th>State</th><th>Zip Code</th><th>Phone Number</th>";
+        + "<th>State</th><th>Zip Code</th><th>Phone Number</th><th>Actions</th>";
     let innerHtml = `${headerHtml}`;
     for (const contact of AddressBookList) {
         innerHtml = `${innerHtml}
@@ -32,25 +37,22 @@ const createInnerHtml = () => {
     document.querySelector('#table-display').innerHTML = innerHtml;
 }
 
-const getContactDetailsFromLocalStorage = () => {
-    return localStorage.getItem('ContactList') ?
-        JSON.parse(localStorage.getItem('ContactList')) : [];
-}
 
-const remove = (node)=>{
-    let contact = AddressBookList.find(contactobj=>contactobj._id==node.id);
-    if(!contact) return;
-    const index = AddressBookList.map(contactobj=>contactobj._id).indexOf(contact._id);
+
+const remove = (node) => {
+    let contact = AddressBookList.find(contactobj => contactobj._id == node.id);
+    if (!contact) return;
+    const index = AddressBookList.map(contactobj => contactobj._id).indexOf(contact._id);
     alert(JSON.stringify(contact));
-    AddressBookList.splice(index,1);
-    localStorage.setItem('ContactList',JSON.stringify(AddressBookList));
+    AddressBookList.splice(index, 1);
+    localStorage.setItem('ContactList', JSON.stringify(AddressBookList));
     document.querySelector('.contact-count').textContent = AddressBookList.length;
     createInnerHtml();
 }
 
 const update = (node) => {
     let contact = AddressBookList.find(contactObj => contactObj._id == node.id);
-    if(!contact) return;
-    localStorage.setItem('editContact',JSON.stringify(contact))
+    if (!contact) return;
+    localStorage.setItem('editAddressBook', JSON.stringify(contact))
     window.location.replace("../pages/address_form.html");
-  }
+}
