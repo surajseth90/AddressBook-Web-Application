@@ -1,0 +1,32 @@
+{
+  "addressBook": [
+    {
+      "id": 3,
+      "_name": "Suraj gupta",
+      "_email": "markj@90gmail.com",
+      "_address": "noida",
+      "_city": "noida",
+      "_state": "Uttar Pradesh",
+      "_zip": "284001",
+      "_phone": "1234567895"
+    },
+    {
+      "_name": "Pooja gupta",
+      "_phone": "8770393407",
+      "_address": "97,kanti nagar",
+      "_city": "gwalior",
+      "_state": "Madhya Pradesh",
+      "_zip": "474002",
+      "id": 4
+    },
+    {
+      "_name": "Sonali Rathore",
+      "_phone": "9109626812",
+      "_address": "D/O SANJAY RATHORE, SONALI KIRANA STORE , BAZARCHOWK, PADHAR BUZURG",
+      "_city": "Betul",
+      "_state": "Madhya Pradesh",
+      "_zip": "460001",
+      "id": 5
+    }
+  ]
+}
